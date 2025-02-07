@@ -21,7 +21,7 @@ class _OllamaAppState extends State<OllamaApp> {
     final response = await http.post(
       Uri.parse('http://localhost:11434/api/generate'),
       headers: {'Content-Type': 'application/json'},
-      body: '{"model": "asaad/epyac.1", "prompt": "$prompt"}',
+      body: '{"model": "smollm:360m", "prompt": "$prompt"}',
     );
 
     if (response.statusCode == 200) {
