@@ -44,7 +44,7 @@ class _ChatScreenState extends State<ChatScreen> {
     try {
       final response = await _dio.post(
         '',
-        data: {'model': 'gemma', 'prompt': message},
+        data: {'model': 'smollm:360m', 'prompt': message},
       );
       setState(() {
         _messages.add({'sender': 'bot', 'text': response.data['response']});
